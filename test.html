@@ -1,0 +1,270 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <title>hello world!!!! </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+<!-------------------------navbar-------------------------------------------->
+
+        <header>
+            <img src="logo-eims_1_orig.png" class="logo" >
+            <div class="navbar-collapse ">
+                <ul class="navbar" >
+                    <li><a href="#"> Ecole</a> <i class="fas fa-caret-down dropdown-icon"> </i>                        
+                        <ul class="dropdown">
+                            <li><a href="#">Présentaion</a></li>
+                            <li><a href="#">Campus</a></li>
+                            <li><a href="#">Equipe</a></li>
+                            <li><a href="#">Actualités</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Formations</a></i></li>
+                    <li><a href="#">International</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Alternance </a> <i class="fas fa-caret-down dropdown-icon"> </i>
+                        <ul class="dropdown">
+                            <li><a href="#">Stages</a></li>
+                            <li><a href="#">Accompagnement</a></li>
+                            <li><a href="#">Entreprises <br> partenaires</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+<!------------------------- scroll-script -------------------------------------------->
+            
+            <script src="js/jquery.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script > 
+               document.addEventListener('scroll', () => {
+                     const scrollPosition = window.scrollY;
+                     const navbar = document.querySelector('header');
+                     if (scrollPosition > 620) {
+                          navbar.classList.add('scrolled');
+
+                     } 
+                     else {
+                          navbar.classList.remove('scrolled');
+                     }
+                });
+            </script>
+            
+            <button class="toggle-collapse">
+                <i class="fas fa-bars"> </i>
+            </button>
+            
+            </div>
+            
+        </header>
+
+        
+<!-------------------------toggle button-------------------------------------------->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.toggle-collapse').click(
+                    function(){
+                        $('.navbar-collapse').toggleClass('collapse');
+                    }
+                )
+            })
+        </script>
+<!-------------------------banner-------------------------------------------->
+     <div class="banner">
+            <div class="text-box">
+                <h1>BIENVENUE À L'EIMS</h1>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo corporis quidem dolore, vel ad fugiat cupiditate atque quae est aut animi ut? Ducimus rerum facilis blanditiis molestiae corporis cumque nesciunt!</p>
+                <a href=""> Visit us to learn more</a>
+            </div>
+     </div>
+<!-------------------------Formations-------------------------------------------->
+        <h1 class="cards-title"> Nos Formations </h1>
+        <p class="cards-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Recusandae assumenda quo incidunt? Ratione voluptatem, <br> inventore ipsum blanditiis ut molestias veritatis voluptates sed necessitatibus et. Non fugiat quis architecto porro?</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-content">
+                    <h3> Licence finance</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit inventore sed quos aspernatur autem voluptatibus unde rem nam cupiditate vel animi iusto eveniet dolorem possimus laborum, maxime aperiam. Iusto, architecto.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Licence Logistique </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam delectus fugiat enim laboriosam neque, reiciendis perferendis, pariatur quae voluptatibus, expedita suscipit odit quia cum. Optio omnis error ipsa ipsum aspernatur. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3> Licence Marketing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit inventore sed quos aspernatur autem voluptatibus unde rem nam cupiditate vel animi iusto eveniet dolorem possimus laborum, maxime aperiam. Iusto, architecto.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3> Master Management de projets innovants</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit inventore sed quos aspernatur autem voluptatibus unde rem nam cupiditate vel animi iusto eveniet dolorem possimus laborum, maxime aperiam. Iusto, architecto.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3> Master Marketing pharmaceutique</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit inventore sed quos aspernatur autem voluptatibus unde rem nam cupiditate vel animi iusto eveniet dolorem possimus laborum, maxime aperiam. Iusto, architecto.</p>
+                </div>
+            </div>
+        </div>
+<!-------------------------campus-------------------------------------------->
+        <div class="campus-text">
+            <h1> Notre Campus </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Recusandae assumenda quo incidunt? Ratione voluptatem, <br> inventore ipsum blanditiis ut molestias veritatis voluptates sed necessitatibus et. Non fugiat quis architecto porro?</p>
+        </div>
+        <div class="campus">
+            <div class="campus-img">
+                <img src="campus.jpg" alt="">
+                <div class="campus-layer">
+                    <h3>Campus 1 </h3>
+                </div>
+            </div>
+            <div class="campus-img">
+                <img src="campus.jpg" alt="">
+                <div class="campus-layer">
+                   <h3>Campus 2</h3> 
+                </div>
+            </div>
+            <div class="campus-img">
+                <img src="campus.jpg" alt="">
+                <div class="campus-layer">
+                   <h3>Campus 3</h3> 
+                </div>
+            </div>
+                
+            
+        </div>
+<!-------------------------Slide-Show-------------------------------------------->
+        <div class="container">
+            <h2 class="slider-title">Slide Show</h2>
+            <div class="slider">
+                <!----12 sildes-------------------------------------------------->
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="slide-images/photo-1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-5.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-6.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-7.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-8.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-9.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-10.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-11.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="slide-images/photo-12.jpg" alt="">
+                    </div>
+                <!----same 12 sildes(doubled)------------------------------------>
+                <div class="slide">
+                    <img src="slide-images/photo-1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-5.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-6.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-7.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-8.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-9.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-10.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-11.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide-images/photo-12.jpg" alt="">
+                </div>
+                </div>
+                    
+
+            </div>
+        </div>
+<!-------------------------Footer-------------------------------------------->
+<footer>
+    <div class="top-section">
+      <div class="logo">
+        <img src="logo-scroll.png" alt="Logo">
+      </div>
+      <div class="phone">
+        <i class="fas fa-phone"></i>
+        <span>+1 555 123 4567</span>
+      </div>
+      <div class="location">
+        <i class="fas fa-map-location"></i>
+        <span>123 Main St, Anytown, USA</span>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <ul class="social-media-icons">
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+        &copy; 2023 My Website Name. All rights reserved.
+      </div>
+  </footer>
+  
+
+
+    </body>
+
+
+
+    
+</html>
