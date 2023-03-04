@@ -43,16 +43,20 @@ header.scrolled .navbar a {
   color: #fff;
   transition: color 0.3s ease-in-out;
 }
+header.scrolled label {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
 .logo {
   font-size: 30px;
   margin: 4px 0 6px 24px;
-  width: 80px;
+  width: 85px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 header.scrolled .logo {
   content: url("logo-eims-white.png");
-  width: 85px;
+  width: 80px;
 }
 .navbar li {
   font-weight: 600;
@@ -60,50 +64,52 @@ header.scrolled .logo {
   display: inline;
   margin: 24px;
   position: relative;
-  transition: 0.5s ease-in-out;
 }
-.navbar li a {
+.navbar li a,
+.first,
+.second,
+.third {
+  font-size: 18px;
   color: #040444;
   text-transform: uppercase;
-}
-
-.navbar li::after {
-  content: "";
-  height: 3px;
-  width: 0%;
-  margin: 0 0 -5px 0;
-  background: #3ec1ac;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   transition: 0.3s ease-in-out;
 }
 
-.navbar li:hover::after {
-  width: 100%;
+.navbar li a:hover,
+.first:hover,
+.second:hover,
+.third:hover {
+  color: #1a7566;
+  transition: 0.3s ease-in-out;
+}
+input[type="checkbox"] {
+  visibility: hidden;
 }
 
 .dropdown {
   position: absolute;
-  right: -10%;
+  left: -8%;
   width: fit-content;
   height: fit-content;
   background: #b7f1f0;
   flex-direction: column;
   border-radius: 10px;
   display: none;
-  margin: 5.5px;
+  margin: 2px;
   padding: 16px;
   transition: 0.3s ease-in-out;
+}
+.dropdown li a {
+  margin: 4px;
 }
 
 .navbar li:hover .dropdown {
   display: flex;
-  gap: 8px;
 }
 .navbar li .dropdown li {
   font-weight: 600;
   margin: 0;
+  white-space: nowrap;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -267,7 +273,7 @@ header.scrolled .logo {
 }
 .campus-img img:hover {
   opacity: 0.175;
-  border: #040444 5px solid;
+  border: 3px solid;
 }
 .campus-img h3 {
   position: absolute;
@@ -397,19 +403,26 @@ footer {
   color: rgb(107, 245, 222);
 }
 
-@media (max-width: 1300px) {
-  ul li {
+@media (max-width: 1200px) {
+  .navbar li {
+    transition: 0s;
+  }
+  .navbar li a,
+  .first,
+  .second,
+  .third {
+    font-size: 16px;
     transition: 0s;
   }
   .cards {
     gap: calc(5%);
   }
-  ul li ul.dropdown li {
+  .dropdown li {
     transition: 0s;
   }
 }
 
-@media (max-width: 952px) {
+@media (max-width: 1024px) {
   .banner {
     height: 80vh;
   }
@@ -423,14 +436,23 @@ footer {
     font-size: 20px;
     padding: 10px 20px;
   }
-  ul li ul {
-    display: none;
-  }
-  ul li ul li {
-    transition: 0.5s ease;
-  }
-  ul li:hover::after {
+  .dropdown {
     display: flex;
+  }
+  .dropdown li {
+    transition: 0ms;
+  }
+  .navbar li:hover::after {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -438,11 +460,9 @@ footer {
     display: flex;
     position: absolute;
     top: 100%;
-    height: 100vh;
-    right: 0;
-    width: 200px;
+    height: 200vh;
+    width: 100%;
     background: #b7f1f0;
-    flex-direction: column;
     visibility: hidden;
   }
   header.scrolled .navbar-collapse {
@@ -457,6 +477,11 @@ footer {
     transition: all 0s ease-in-out;
     color: #040444;
   }
+  .navbar li:hover .dropdown li {
+    display: flex;
+    gap: 8px;
+  }
+
   .toggle-collapse {
     display: inline-block;
     transition: 0.3s ease-in-out;
@@ -468,8 +493,34 @@ footer {
   .collapse {
     visibility: visible;
   }
-  ul li ul.dropdown {
+  .dropdown-icon {
+    margin-right: 0px;
+  }
+  .dropdown {
     visibility: hidden;
+    display: none;
+    transition: 0.3s ease-in-out;
+  }
+  [id^="btn"]:checked + .dropdown {
+    display: flex;
+    visibility: visible;
+    position: static;
+    flex-direction: column;
+    align-items: center;
+  }
+  [id^="btn"]:checked + .navbar li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown li {
+    border-bottom: none;
+  }
+  .dropdown li a {
+    font-size: smaller;
+  }
+  input {
+    display: none;
   }
   .text-box h1 {
     font-size: 40px;
