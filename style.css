@@ -34,8 +34,13 @@ header.scrolled .dropdown-icon {
   color: #fff;
   transition: color 0.3s ease-in-out;
 }
+
 header.scrolled .dropdown {
   background-color: #040444;
+  transition: color 0.3s ease-in-out;
+}
+header.scrolled .navbar a {
+  color: #fff;
   transition: color 0.3s ease-in-out;
 }
 .logo {
@@ -43,8 +48,13 @@ header.scrolled .dropdown {
   margin: 4px 0 6px 24px;
   width: 80px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
-ul li {
+header.scrolled .logo {
+  content: url("logo-eims-white.png");
+  width: 85px;
+}
+.navbar li {
   font-weight: 600;
   list-style: none;
   display: inline;
@@ -52,7 +62,7 @@ ul li {
   position: relative;
   transition: 0.5s ease-in-out;
 }
-ul li a {
+.navbar li a {
   color: #040444;
   text-transform: uppercase;
 }
@@ -68,6 +78,7 @@ ul li a {
   bottom: 0;
   transition: 0.3s ease-in-out;
 }
+
 .navbar li:hover::after {
   width: 100%;
 }
@@ -86,11 +97,11 @@ ul li a {
   transition: 0.3s ease-in-out;
 }
 
-ul li:hover ul.dropdown {
+.navbar li:hover .dropdown {
   display: flex;
   gap: 8px;
 }
-ul li ul.dropdown li {
+.navbar li .dropdown li {
   font-weight: 600;
   margin: 0;
   list-style: none;
@@ -360,6 +371,9 @@ footer {
 
 .phone i,
 .location i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
 }
 
@@ -380,7 +394,7 @@ footer {
 }
 
 .social-media-icons a:hover {
-  color: #ccc;
+  color: rgb(107, 245, 222);
 }
 
 @media (max-width: 1300px) {
