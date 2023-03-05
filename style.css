@@ -494,9 +494,14 @@ footer {
     visibility: hidden;
     left: -120%;
     padding: 0;
+    border: solid 1px #040444;
+  }
+  .dropdown li a {
+    font-size: 12px;
   }
   [id^="btn"]:checked + .dropdown {
     display: flex;
+
     background-color: transparent;
     padding: 0;
     visibility: visible;
