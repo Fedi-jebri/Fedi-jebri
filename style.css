@@ -497,7 +497,7 @@ footer {
     border: solid 1px #040444;
   }
   .dropdown li a {
-    font-size: 12px;
+    font-size: 14px;
   }
   [id^="btn"]:checked + .dropdown {
     display: flex;
