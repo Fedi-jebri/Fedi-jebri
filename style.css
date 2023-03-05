@@ -435,9 +435,6 @@ footer {
     font-size: 20px;
     padding: 10px 20px;
   }
-  .dropdown {
-    display: flex;
-  }
   .navbar-collapse {
     display: flex;
     flex-direction: column;
@@ -469,12 +466,6 @@ footer {
     transition: all 0s ease-in-out;
     color: #040444;
   }
-  .navbar li:hover .dropdown li {
-    display: flex;
-  }
-  .navbar li:hover .dropdown li a {
-    font-size: 9.75px;
-  }
 
   .toggle-collapse {
     display: inline-block;
@@ -498,8 +489,11 @@ footer {
     gap: 8px;
   }
   .dropdown {
-    visibility: hidden;
+    position: absolute;
     display: none;
+    visibility: hidden;
+    left: -120%;
+    padding: 0;
   }
   [id^="btn"]:checked + .dropdown {
     display: flex;
@@ -513,13 +507,6 @@ footer {
   [id^="btn"]:checked + .navbar li {
     display: flex;
     justify-content: center;
-  }
-
-  .dropdown li {
-    border-bottom: none;
-  }
-  .dropdown li a {
-    font-size: smaller;
   }
   input {
     display: none;
